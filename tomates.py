@@ -113,7 +113,7 @@ train: train/images
 val: val/images
 test: test/images
 
-nc: 1
+nc: 2
 names: ['tomatinhos']
 '''
 
@@ -127,7 +127,7 @@ model = YOLO('yolov8n.pt')  # Use o modelo pré-treinado que você preferir
 # Iniciar o treinamento
 model.train(
     data='/home/carlos/Documentos/tomatinhos/datasets.yaml',
-    epochs=1000,
+    epochs=10,
     batch=16,
     device='cpu',  # Mude para 'cpu' se não houver GPU
     imgsz=320,
